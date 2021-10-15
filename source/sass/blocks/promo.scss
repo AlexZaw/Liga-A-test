@@ -44,13 +44,18 @@
 .promo__info {
   @media (max-width: 1023px) {
     position: absolute;
-    left: 100%;
+    right: 100%;
     display: grid;
     justify-items: center;
     height: 100%;
     width: 100%;
     background-color: $color-neon-blue;
     z-index: 2;
+    transition: right 0.3s;
+
+    &--show {
+      right: 0;
+    }
   }
 }
 

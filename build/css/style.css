@@ -635,14 +635,18 @@ button,
 @media (max-width: 1023px) {
   .promo__info {
     position: absolute;
-    left: 100%;
+    right: 100%;
     display: -ms-grid;
     display: grid;
     justify-items: center;
     height: 100%;
     width: 100%;
     background-color: #2c39f2;
-    z-index: 2; } }
+    z-index: 2;
+    -webkit-transition: right 0.3s;
+    transition: right 0.3s; }
+    .promo__info--show {
+      right: 0; } }
 
 @media (max-width: 1023px) {
   .promo__logo {
