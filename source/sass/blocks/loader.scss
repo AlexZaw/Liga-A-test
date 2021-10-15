@@ -9,14 +9,23 @@
   min-height: calc(100 * var(--vh, 1vh));
   overflow-x: hidden;
   z-index: 2;
-  display: none;
+  right: 100%;
+  transition: right 0.3s;
+
+  &--show {
+    right: 0;
+  }
 }
 
 .loader__logo {
+  // position: relative;
+  // right: 100vw;
+  transform: translateX(-100vw);
   width: 100%;
   height: 100%;
   max-width: 800px;
   max-height: 100px;
+  animation: showLogo 0.3s linear forwards;
 
   @media (max-width: 1023px) {
     max-width: 550px;
@@ -30,7 +39,14 @@
   bottom: 100px;
   transform: translateX(-50%);
   font-size: 24px;
+  transition: left 0.3s;
 
+  &--hide {
+    left: -100%;
+  }
+}
+
+.loader__done-text {
   @media (max-width: 1023px) {
     &--desktop {
       display: none;
@@ -41,5 +57,15 @@
     &--mobile {
       display: none;
     }
+  }
+}
+
+@keyframes showLogo {
+  0% {
+    transform: translateX(-100vw);
+  }
+
+  100% {
+    transform: translateX(0);
   }
 }
