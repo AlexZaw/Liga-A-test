@@ -1,0 +1,12 @@
+.promo-logo__flag {
+  @media (max-width: 1023px) {
+    fill: $color-default-white;
+    stroke: $color-default-black;
+  }
+}
+
+.promo-logo__mobile {
+  @media (max-width: 1023px) {
+    fill: $color-default-white;
+  }
+}
