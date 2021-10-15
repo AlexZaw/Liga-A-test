@@ -18,18 +18,19 @@
 }
 
 .loader__logo {
-  // position: relative;
-  // right: 100vw;
   transform: translateX(-100vw);
   width: 100%;
   height: 100%;
   max-width: 800px;
   max-height: 100px;
-  animation: showLogo 0.3s linear forwards;
 
   @media (max-width: 1023px) {
     max-width: 550px;
     max-height: 70px;
+  }
+
+  &--animation {
+    animation: showLogo 0.3s linear forwards;
   }
 }
 
@@ -43,6 +44,10 @@
 
   &--hide {
     left: -100%;
+  }
+
+  &--animation {
+    animation: beat 1s 0.3s linear infinite;
   }
 }
 
@@ -67,5 +72,19 @@
 
   100% {
     transform: translateX(0);
+  }
+}
+
+@keyframes beat {
+  0% {
+    transform: translateX(-50%) scale(1);
+  }
+
+  50% {
+    transform: translateX(-50%) scale(0.9);
+  }
+
+  100% {
+    transform: translateX(-50%) scale(1);
   }
 }

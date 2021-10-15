@@ -20,8 +20,7 @@ const html = () => {
       prefix: '@@',
       basepath: '@root',
       context: { // глобальные переменные для include
-        test: 'text',
-        "main": "Большая Лига",
+        test: 'text'
       },
     }))
     .pipe(gulp.dest('build'));

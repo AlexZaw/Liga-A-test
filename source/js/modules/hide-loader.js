@@ -1,12 +1,12 @@
 const loader = document.querySelector('.loader');
 const loaderDone = document.querySelector('.loader__done');
 
+
 window.onload = function () {
-  loaderDone.classList.remove('loader__done--hide');
-  window.setTimeout(function () {
-    document.body.classList.add('loaded');
-    document.body.classList.remove('loaded_hiding');
-  }, 500);
+  if (loaderDone) {
+    loaderDone.classList.remove('loader__done--hide');
+    loaderDone.classList.add('loader__done--animation');
+  }
 };
 
 const hideLoader = (evt) => {
